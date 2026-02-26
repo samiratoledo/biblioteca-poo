@@ -1,4 +1,20 @@
 public class Usuario {
-    String nome = "Salomâo";
-    String cpf = "123.456.789-00";
+    String nome;
+    String cpf;
+
+    public Usuario (String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome () {
+        return nome;
+    }
+
+    public String getDocumento () {
+        return nome;
+    }
+
+    public Boolean verificacaoDocumento() {
+        return true;
+    }
 }
