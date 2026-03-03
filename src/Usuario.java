@@ -1,6 +1,9 @@
 public class Usuario {
-    String nome;
-    String cpf;
+
+    private String codigo;
+    private String nome;
+    private String cpf;
+    private String email;
 
     public Usuario (String nome) {
         this.nome = nome;
