@@ -67,11 +67,10 @@ Responsável por gerenciar a coleção de livros da biblioteca, incluindo listag
 
 ## 📚 Objetivo do Projeto
 
-Este projeto foi desenvolvido com o objetivo de praticar:
+Este projeto foi desenvolvido como **trabalho escolar da disciplina de Desenvolvimento de Sistemas (DS)**, com o objetivo de praticar:
 
-* Estruturação de sistemas utilizando **POO**
-* Manipulação de **listas em Java**
-* Organização de código em **múltiplas classes**
-* Desenvolvimento de aplicações simples no **terminal**
-
-
+* Conceitos fundamentais de **Programação Orientada a Objetos**
+* Manipulação de **listas (`ArrayList`) em Java**
+* Estruturação de projetos utilizando **múltiplas classes**
+* Desenvolvimento de aplicações simples executadas no **terminal**
+* Organização de código e separação de responsabilidades entre componentes do sistema
