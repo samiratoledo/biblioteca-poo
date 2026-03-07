@@ -43,12 +43,12 @@ O foco principal foi praticar **estruturação de código em múltiplas classes*
 ## 🏗 Estrutura do Projeto
 
 O sistema foi organizado em diferentes classes para manter o código mais limpo e modular:
-Bibliotech
-│
-├── App.java
-├── Livro.java
-├── Usuario.java
-└── Acervo.java
+<br>Bibliotech
+<br>│
+<br>├── App.java
+<br>├── Livro.java
+<br>├── Usuario.java
+<br>└── Acervo.java
 
 
 **App.java**  
@@ -73,3 +73,4 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 * Manipulação de **listas em Java**
 * Organização de código em **múltiplas classes**
 * Desenvolvimento de aplicações simples no **terminal**
+
