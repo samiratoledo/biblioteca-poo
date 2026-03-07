@@ -1,26 +1,44 @@
 public class Livro {
-    private String codigo;
-    private String nome;
-    private String autor;
-    private int quantidadePaginas;
-    private String editora;
-    private String pais;
 
-    Livro diarioDeAnneFrank = new Livro(){
-        nome="Diário de Anne Frank";
-        autor="Anne Frank";
-        quantidadePaginas = 222;
-        editora="Record";
-        pais="Alemanha";
+    private final String codigo;
+    private final String nome;
+    private final String autor;
+    private boolean disponivel = true;
+    private Usuario locatario;
+
+    private static int contador = 1;
+
+    public Livro(String nome, String autor) {
+        this.codigo = "L" + contador++;
+        this.nome = nome;
+        this.autor = autor;
     }
 
-    Livro divergente = new Livro() {
-
-        autor="Anne Frank";
-        nome="Diário de Anne Frank";
-        quantidadePaginas = 222;
-        editora="Record";
+    public String getCodigo() {
+        return codigo;
     }
-    pais="Alemanha";
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean status) {
+        this.disponivel = status;
+    }
+
+    public Usuario getLocatario() {
+        return locatario;
+    }
+
+    public void setLocatario(Usuario locatario) {
+        this.locatario = locatario;
+    }
 }

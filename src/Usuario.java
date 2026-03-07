@@ -1,23 +1,33 @@
+
 public class Usuario {
 
-    private String codigo;
-    private String nome;
-    private String cpf;
-    private String email;
+    private final String codigo;
+    private final String nome;
+    private final String cpf;
+    private final String email;
+    
+    private static int contador = 1;
 
-    public Usuario (String nome) {
+    public Usuario(String nome, String cpf, String email) {
+        this.codigo = "U" + contador++;
         this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
     }
 
-    public String getNome () {
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
         return nome;
     }
 
-    public String getDocumento () {
-        return nome;
+    public String getCpf() {
+        return cpf;
     }
 
-    public Boolean verificacaoDocumento() {
-        return true;
+    public String getEmail() {
+        return email;
     }
 }
