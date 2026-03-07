@@ -1,8 +1,8 @@
-### Criar classes
+Criar classes
 1. Usuário 
 2. Livros
 
-## Propostas do Projeto 
+Propostas do Projeto 
 1. Listas acervo
 2. Listar usuários
 3. Emprestar livro
