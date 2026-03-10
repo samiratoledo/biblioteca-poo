@@ -6,7 +6,7 @@ public class Livro {
     private boolean disponivel = true;
     private Usuario locatario;
 
-    private static int contador = 1;
+    private static int contador = 0;
 
     public Livro(String nome, String autor) {
         this.codigo = "L" + contador++;
@@ -41,4 +41,5 @@ public class Livro {
     public void setLocatario(Usuario locatario) {
         this.locatario = locatario;
     }
+
 }

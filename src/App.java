@@ -24,6 +24,8 @@ public class App {
             System.out.println("==     4. Devolver livro;    ==");
             System.out.println("==     5. Cadastrar livro;   ==");
             System.out.println("==     6. Cadastrar usuário  ==");
+            System.out.println("==     7. Deletar livro      ==");
+            System.out.println("==     8. Deletar usuário    ==");
             System.out.println("==     0. Sair               ==");
             System.out.println("===============================");
 
@@ -79,27 +81,31 @@ public class App {
                     System.out.println("Escolha o livro:");
                     int livroIndex = sc.nextInt();
 
-                    for (int i = 0; i < usuarios.size(); i++) {
+                    if (livroIndex < acervo.getObras().size()) {
 
-                        System.out.println(i + " - " + usuarios.get(i).getNome());
-                    }
+                        for (int i = 0; i < usuarios.size(); i++) {
 
-                    System.out.println("Escolha o usuário:");
-                    int userIndex = sc.nextInt();
+                            System.out.println(i + " - " + usuarios.get(i).getNome());
+                        }
 
-                    Livro livro = acervo.getObras().get(livroIndex);
+                        System.out.println("Escolha o usuário:");
+                        int userIndex = sc.nextInt();
 
-                    if (livro.isDisponivel()) {
+                        Livro livro = acervo.getObras().get(livroIndex);
 
-                        livro.setDisponivel(false);
-                        livro.setLocatario(usuarios.get(userIndex));
+                        if (livro.isDisponivel()) {
 
-                        System.out.println("Livro emprestado com sucesso!");
+                            livro.setDisponivel(false);
+                            livro.setLocatario(usuarios.get(userIndex));
+
+                            System.out.println("Livro emprestado com sucesso!");
+                        } else {
+
+                            System.out.println("Livro já emprestado.");
+                        }
                     } else {
-
-                        System.out.println("Livro já emprestado.");
+                        System.out.println("Esse livro não existe.");
                     }
-
                     break;
 
                 case 4:
@@ -125,12 +131,17 @@ public class App {
 
                     int devolucao = sc.nextInt();
 
-                    Livro livroDev = acervo.getObras().get(devolucao);
+                    if (devolucao < acervo.getObras().size()) {
 
-                    livroDev.setDisponivel(true);
-                    livroDev.setLocatario(null);
+                        Livro livroDev = acervo.getObras().get(devolucao);
 
-                    System.out.println("Livro devolvido!");
+                        livroDev.setDisponivel(true);
+                        livroDev.setLocatario(null);
+
+                        System.out.println("Livro devolvido!");
+                    } else {
+                        System.out.println("Esse livro não existe!");
+                    }
 
                     break;
 
@@ -170,6 +181,57 @@ public class App {
                     usuarios.add(novoUsuario);
 
                     System.out.println("Usuário cadastrado!");
+
+                    break;
+
+                case 7:
+                    System.out.println("\n=== DELETAR LIVRO ===");
+
+                    if (acervo.getObras().isEmpty()) {
+                        System.out.println("Não há livros para serem deletados.");
+                    } else {
+
+                        acervo.listarLivros();
+                        System.out.println("Digite o número do livro que quer deletar: ");
+                        int deletar = sc.nextInt();
+
+                        if (deletar >= acervo.getObras().size()) {
+                            System.out.println("Esse livro não existe.");
+
+                        } else {
+                            acervo.getObras().remove(deletar);
+                            System.out.println("Livro removido com sucesso");
+                        }
+                    }
+
+                    break;
+
+                case 8:
+                    System.out.println("\n=== DELETAR USUÁRIO ===");
+
+                    if (usuarios.isEmpty()) {
+                        System.out.println("Não há usuários para serem deletados.");
+                    } else {
+
+                        for (Usuario u : usuarios) {
+                            System.out.println(
+                                    u.getCodigo() + " | "
+                                    + u.getNome() + " | "
+                                    + u.getEmail());
+                        }
+
+                        System.out.println("Digite o número do usuário que quer deletar: ");
+                        int deletar = sc.nextInt();
+
+                        if (deletar >= usuarios.size()) {
+                            System.out.println("Esse usuário não existe.");
+                        } else {
+                            usuarios.remove(deletar);
+
+                            System.out.println("Usuário removido com sucesso");
+                        }
+
+                    }
 
                     break;
 

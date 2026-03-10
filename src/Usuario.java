@@ -5,8 +5,8 @@ public class Usuario {
     private final String nome;
     private final String cpf;
     private final String email;
-    
-    private static int contador = 1;
+    private static int contador = 0;
+    //private int numeroLivros = 0;
 
     public Usuario(String nome, String cpf, String email) {
         this.codigo = "U" + contador++;
@@ -30,4 +30,8 @@ public class Usuario {
     public String getEmail() {
         return email;
     }
+
+    /*public int getNumeroLivros() {
+        return numeroLivros;
+    }*/
 }

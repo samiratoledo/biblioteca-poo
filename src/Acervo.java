@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Acervo {
@@ -20,10 +21,19 @@ public class Acervo {
 
                 System.out.println(
                         livro.getCodigo() + " | "
-                                + livro.getNome() + " | "
-                                + livro.getAutor() + " | "
-                                + status);
+                        + livro.getNome() + " | "
+                        + livro.getAutor() + " | "
+                        + status);
             }
+        }
+    }
+
+    public void removerLivros(int deletar) {
+
+        if (obras.isEmpty()) {
+            System.out.println("Nenhum livro cadastrado.");
+        } else {
+
         }
     }
 
